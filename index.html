@@ -18,7 +18,7 @@
 
 
 
-        <div class="Footer"></div>
+        <div class="Footer"><h1 class = "pixelify-sans-text">Click The Pixel Block to Gain Pixel Points!!!</h1></div>
 
 
 
@@ -31,22 +31,33 @@
 
 
         <div class="Store">
-            <button><img src= "images/Pixel_Arrow.png" height = "70"></button>
             <br>
-            <button><img src = "images/Pixel_Coin.png" height = "70"></button>
+            <button class = "pixelify-sans-text" onclick = "addArrow()"><img src= "images/Pixel_Arrow.png" height = "70"> Pixel Arrow (10 Pixels)</button>
+            <h3 id = "totalArrows" class = "pixelify-sans-text">0 Pixel Arrows </h3>
+            <br>
+            <button class = "pixelify-sans-text" onclick = "addCoins()"><img src = "images/Pixel_Coin.png" height = "70"> Pixel Coin (100 Pixels)</button>
+            <h3 id = "totalCoins" class = "pixelify-sans-text">0 Pixel Coins</h3>
+            <br>
+            <button class = "pixelify-sans-text" onclick = "addPickaxes()"><img src = "images/Pixel_Pickaxe.png" height = "70"> Pixel Pickaxe (450 Pixels)</button>
+            <h3 id = "totalPickaxes" class = "pixelify-sans-text">0 Pixel Pickaxes</h3>
+            <br>
+            <button class = "pixelify-sans-text" onclick = "addStars()"><img src = "images/Pixel_Star.png" height = "70"> Pixel Star (900 Pixels)</button>
+            <h3 id = "totalStars" class = "pixelify-sans-text">0 Pixel Stars</h3>
         </div>
         
 
 
 
         <div class="Game">
-            <h2 id = "pointsTracker">0</h2>
-            <button><img src="images/Clicker_Block.png" height="180"></button>
+            <br>
+            <br>
+            <h2 class = "pixelify-sans-text" id = "pointsTracker">0 Pixels</h2>
+            <button onclick = "addPoint()" ><img src="images/Clicker_Block.png" height="180"></button>
         </div>
 
 
 
     </div>
-
+<script src = "script.js"></script>
 </body>
 </html>

@@ -4,11 +4,17 @@
   font-weight: bold;
   font-style: normal;
   text-align: center;
-  color: rgb(5, 128, 252);
   
 }
 
+h1{
+  color: rgb(25, 105, 216);
+}
 
+h2{
+  color: rgb(146, 215, 255);
+  font-weight: lighter;
+}
 
 .container {
     display: grid; 
@@ -24,7 +30,7 @@
 
   .Footer { 
     grid-area: Footer; 
-    background-color: rgb(28, 28, 143);
+    background-color: rgb(24, 24, 97);
     }
 
   .Header {
@@ -33,11 +39,13 @@
     }
 
   .Store { 
+    text-align: center;
     grid-area: Store; 
     background-color: rgb(7, 81, 208);
     }
 
   .Game { 
+    text-align: center;
     grid-area: Game;
     background-color: rgb(48, 117, 201); 
     }
