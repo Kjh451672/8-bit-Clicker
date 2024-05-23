@@ -3,7 +3,7 @@ let pointsTracker = document.getElementById('pointsTracker')
 
 function addPoint() { 
     points++
-    pointsTracker.innerText = points + " Pixels"
+    pointsTracker.innerText = points.toFixed(2) + " Pixels"
 }
 
 
@@ -16,7 +16,7 @@ function addArrow(){
         points = points - 10
         arrows++
         totalArrows.innerText = arrows + " Pixel Arrows"
-        pointsTracker.innerText = points + " Pixels"
+        pointsTracker.innerText = points.toFixed(2) + " Pixels"
     }
     else{
         alert("You dont have enough Pixels!")
@@ -33,7 +33,7 @@ function addCoins(){
         points = points - 100
         coins++
         totalCoins.innerText = coins + " Pixel Coins"
-        pointsTracker.innerText = points + " Pixels"
+        pointsTracker.innerText = points.toFixed(2) + " Pixels"
     }
     else{
         alert("You dont have enough Pixels!")
@@ -48,7 +48,7 @@ function addPickaxes(){
         points = points - 450
         pickaxes++
         totalPickaxes.innerText = pickaxes + " Pixel Pickaxes"
-        pointsTracker.innerText = points + " Pixels"
+        pointsTracker.innerText = points.toFixed(2) + " Pixels"
     }
     else{
         alert("You dont have enough Pixels!")
@@ -65,10 +65,44 @@ function addStars(){
         points = points - 900
         stars++
         totalStars.innerText = stars + " Pixel Stars"
-        pointsTracker.innerText = points + " Pixels"
+        pointsTracker.innerText = points.toFixed(2) + " Pixels"
     }
     else {
         alert("You dont have enough Pixels!")
     }
 }
 
+
+
+function autoArrow()
+{
+    points = points + (0.2 * arrows)
+    pointsTracker.innerText = points.toFixed(2) + " Pixels"
+}
+
+
+function autoCoin()
+{
+    points = points + (1 * coins)
+    pointsTracker.innerText = points.toFixed(2) + " Pixels"
+}
+
+
+function autoPickaxe()
+{
+    points = points + (10 * pickaxes)
+    pointsTracker.innerText = points.toFixed(2) + " Pixels"
+}
+
+
+function autoStar()
+{
+    points = points + (100 * stars)
+    pointsTracker.innerText = points.toFixed(2) + " Pixels"
+}
+
+
+setInterval(autoArrow, 1000)
+setInterval(autoCoin, 1000)
+setInterval(autoPickaxe, 1000)
+setInterval(autoStar, 1000)
