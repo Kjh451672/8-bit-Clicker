@@ -55,14 +55,27 @@ function addPickaxes(){
     }
 }
 
-
+let gems = 0
+let totalGems = document.getElementById('totalGems')
+function addGems(){
+    if(points >= 700)
+    {
+        points = points - 700
+        gems++
+        totalGems.innerText = gems + " Pixel Gems"
+        pointsTracker.innerText = points.toFixed(2) + " Pixels"
+    }
+    else {
+        alert("You dont have enough Pixels!")
+    }
+}
 
 let stars = 0
 let totalStars = document.getElementById('totalStars')
 function addStars(){
     if(points >= 900)
     {
-        points = points - 900
+        points = points - 1000
         stars++
         totalStars.innerText = stars + " Pixel Stars"
         pointsTracker.innerText = points.toFixed(2) + " Pixels"
@@ -94,6 +107,11 @@ function autoPickaxe()
     pointsTracker.innerText = points.toFixed(2) + " Pixels"
 }
 
+function autoGem()
+{
+    points = points + (50 * gems)
+    pointsTracker.innerText = points.toFixed(2) + " Pixels"
+}
 
 function autoStar()
 {
@@ -105,4 +123,5 @@ function autoStar()
 setInterval(autoArrow, 1000)
 setInterval(autoCoin, 1000)
 setInterval(autoPickaxe, 1000)
+setInterval(autoGem, 1000)
 setInterval(autoStar, 1000)
