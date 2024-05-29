@@ -10,16 +10,22 @@ function addPoint() {
 
 let arrows = 0
 let totalArrows = document.getElementById('totalArrows')
+let arrowCost = document.getElementById('arrowCost')
+let arrowbtn = document.getElementById('arrowbtn')
 function addArrow(){
-    if(points >= 10)
-    {
-        points = points - 10
+    let arrowPrice = 10 + arrows ** 1.5
+    if(points >= arrowPrice)
+    {   
+        arrowbtn.button = false
+        points = points - arrowPrice
         arrows++
         totalArrows.innerText = arrows + " Pixel Arrows"
         pointsTracker.innerText = points.toFixed(2) + " Pixels"
+        arrowCost.innerText = "Cost: " + (10 + arrows ** 1.5).toFixed(2) + " Pixels"
     }
     else{
-        alert("You dont have enough Pixels!")
+        arrowbtn.button = true
+        
     }
 }
 
@@ -27,61 +33,81 @@ function addArrow(){
 
 let coins = 0
 let totalCoins = document.getElementById('totalCoins')
+let coinCost = document.getElementById('coinCost')
+let coinbtn = document.getElementById('coinbtn')
 function addCoins(){
-    if (points >= 100)
-    {
-        points = points - 100
+    let coinPrice = 100 + coins ** 3.7
+    if (points >= coinPrice)
+    {   
+        coinbtn.disabled = false
+        points = points - coinPrice
         coins++
         totalCoins.innerText = coins + " Pixel Coins"
         pointsTracker.innerText = points.toFixed(2) + " Pixels"
+        coinCost.innerText = "Cost: " + (100 + coins ** 2).toFixed(2) + " Pixels"
     }
     else{
-        alert("You dont have enough Pixels!")
+        coinbtn.disabled = true
     }
 }
 
 let pickaxes = 0
 let totalPickaxes = document.getElementById('totalPickaxes')
+let pickaxeCost = document.getElementById('pickaxeCost')
+let pickaxebtn = document.getElementById('pickaxebtn')
 function addPickaxes(){
-    if (points >= 450)
-    {
-        points = points - 450
+    let pickaxePrice = 450 + pickaxes ** 4.8
+    if (points >= pickaxePrice)
+    {   
+        pickaxebtn.disabled = false
+        points = points - pickaxePrice
         pickaxes++
         totalPickaxes.innerText = pickaxes + " Pixel Pickaxes"
         pointsTracker.innerText = points.toFixed(2) + " Pixels"
+        pickaxeCost.innerText = "Cost: " + (450 + pickaxes ** 7.5).toFixed(2) + " Pixels"
     }
     else{
-        alert("You dont have enough Pixels!")
+        pickaxebtn.disabled = true
     }
 }
 
 let gems = 0
 let totalGems = document.getElementById('totalGems')
+let gemCost = document.getElementById('gemCost')
+let gembtn = document.getElementById('gembtn')
 function addGems(){
-    if(points >= 700)
-    {
-        points = points - 700
+    let gemPrice = 700 + gems ** 6.5
+    if(points >= gemPrice)
+    {   
+        gembtn.disabled = false
+        points = points - gemPrice
         gems++
         totalGems.innerText = gems + " Pixel Gems"
         pointsTracker.innerText = points.toFixed(2) + " Pixels"
+        gemCost.innerText = "Cost: " + (700 + gems ** 1.5).toFixed(2) + " Pixels"
     }
     else {
-        alert("You dont have enough Pixels!")
+        gembtn.disabled = true
     }
 }
 
 let stars = 0
 let totalStars = document.getElementById('totalStars')
+let starCost = document.getElementById('starCost')
+let starbtn = document.getElementById('starbtn')
 function addStars(){
-    if(points >= 900)
-    {
-        points = points - 1000
+    let starPrice = 1000 + stars ** 8.8
+    if(points >= starPrice)
+    {   
+        starbtn.disabled = false
+        points = points - starPrice
         stars++
         totalStars.innerText = stars + " Pixel Stars"
         pointsTracker.innerText = points.toFixed(2) + " Pixels"
+        starCost.innerText = "Cost: " + (1000 + stars ** 3.4).toFixed(2) + " Pixels"
     }
     else {
-        alert("You dont have enough Pixels!")
+        starbtn.disabled = true
     }
 }
 
@@ -91,6 +117,8 @@ function autoArrow()
 {
     points = points + (0.2 * arrows)
     pointsTracker.innerText = points.toFixed(2) + " Pixels"
+
+    
 }
 
 
