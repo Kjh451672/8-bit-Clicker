@@ -99,8 +99,6 @@ function gameLoop()
     if(points >= 10 + arrows ** 1.5)
     {
     arrowbtn.disabled = false
-    points = points + (0.2 * arrows)
-    pointsTracker.innerText = points.toFixed(2) + " Pixels"
     }
     else{
         arrowbtn.disabled = true
@@ -110,8 +108,6 @@ function gameLoop()
     if(points >= 100 + coins ** 3.7)
     {
     coinbtn.disabled = false
-    points = points + (1 * coins)
-    pointsTracker.innerText = points.toFixed(2) + " Pixels"
     }else{
         coinbtn.disabled = true
     }
@@ -121,8 +117,6 @@ function gameLoop()
     if(points >= 450 + pickaxes ** 4.8)
     {
     pickaxebtn.disabled = false
-    points = points + (10 * pickaxes)
-    pointsTracker.innerText = points.toFixed(2) + " Pixels"
     }else{
         pickaxebtn.disabled = true
     }
@@ -131,8 +125,6 @@ function gameLoop()
     if(points >= 700 + gems ** 6.5)
     {
     gembtn.disabled = false
-    points = points + (50 * gems)
-    pointsTracker.innerText = points.toFixed(2) + " Pixels"
     }else{
         gembtn.disabled = true
     }
@@ -141,11 +133,12 @@ function gameLoop()
     if(points >= 1000 + stars ** 8.8)
     {
     starbtn.disabled = false
-    points = points + (100 * stars)
-    pointsTracker.innerText = points.toFixed(2) + " Pixels"
     }else{
         starbtn.disabled = true
     }
+
+    points = points + (arrows * 0.2) + (coins * 1) + (pickaxes * 10) + (gems * 50) + (stars * 100)
+    pointsTracker.innerText = points.toFixed(2) + " Pixels"
 
 }
 
