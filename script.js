@@ -47,14 +47,14 @@ let totalPickaxes = document.getElementById('totalPickaxes')
 let pickaxeCost = document.getElementById('pickaxeCost')
 let pickaxebtn = document.getElementById('pickaxebtn')
 function addPickaxes(){
-    let pickaxePrice = 450 + pickaxes ** 3.4
+    let pickaxePrice = 450 + pickaxes ** 3.2
     if (points >= pickaxePrice)
     {   
         points = points - pickaxePrice
         pickaxes++
         totalPickaxes.innerText = pickaxes + " Pixel Pickaxes"
         pointsTracker.innerText = points.toFixed(2) + " Pixels"
-        pickaxeCost.innerText = "Cost: " + (450 + pickaxes ** 3.4).toFixed(2) + " Pixels"
+        pickaxeCost.innerText = "Cost: " + (450 + pickaxes ** 3.2).toFixed(2) + " Pixels"
     }
 }
 
@@ -64,14 +64,14 @@ let totalGems = document.getElementById('totalGems')
 let gemCost = document.getElementById('gemCost')
 let gembtn = document.getElementById('gembtn')
 function addGems(){
-    let gemPrice = 700 + gems ** 4.2
+    let gemPrice = 700 + gems ** 4.3
     if(points >= gemPrice)
     {   
         points = points - gemPrice
         gems++
         totalGems.innerText = gems + " Pixel Gems"
         pointsTracker.innerText = points.toFixed(2) + " Pixels"
-        gemCost.innerText = "Cost: " + (700 + gems ** 4.2).toFixed(2) + " Pixels"
+        gemCost.innerText = "Cost: " + (700 + gems ** 4.3).toFixed(2) + " Pixels"
     }
 }
 
@@ -80,14 +80,14 @@ let totalStars = document.getElementById('totalStars')
 let starCost = document.getElementById('starCost')
 let starbtn = document.getElementById('starbtn')
 function addStars(){
-    let starPrice = 1000 + stars ** 5
+    let starPrice = 1000 + stars ** 6
     if(points >= starPrice)
     {   
         points = points - starPrice
         stars++
         totalStars.innerText = stars + " Pixel Stars"
         pointsTracker.innerText = points.toFixed(2) + " Pixels"
-        starCost.innerText = "Cost: " + (1000 + stars ** 5).toFixed(2) + " Pixels"
+        starCost.innerText = "Cost: " + (1000 + stars ** 6).toFixed(2) + " Pixels"
     }
     
 }
@@ -105,7 +105,7 @@ function gameLoop()
     }
 
 
-    if(points >= 100 + coins ** 3.7)
+    if(points >= 100 + coins ** 2)
     {
     coinbtn.disabled = false
     }else{
@@ -114,7 +114,7 @@ function gameLoop()
 
 
 
-    if(points >= 450 + pickaxes ** 4.8)
+    if(points >= 450 + pickaxes ** 3.2)
     {
     pickaxebtn.disabled = false
     }else{
@@ -122,7 +122,7 @@ function gameLoop()
     }
 
 
-    if(points >= 700 + gems ** 6.5)
+    if(points >= 700 + gems ** 4.3)
     {
     gembtn.disabled = false
     }else{
@@ -130,7 +130,7 @@ function gameLoop()
     }
 
      
-    if(points >= 1000 + stars ** 8.8)
+    if(points >= 1000 + stars ** 6)
     {
     starbtn.disabled = false
     }else{
