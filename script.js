@@ -31,7 +31,7 @@ let totalCoins = document.getElementById('totalCoins')
 let coinCost = document.getElementById('coinCost')
 let coinbtn = document.getElementById('coinbtn')
 function addCoins(){
-    let coinPrice = 100 + coins ** 4.8
+    let coinPrice = 100 + coins ** 2
     if (points >= coinPrice)
     {   
         points = points - coinPrice
@@ -47,14 +47,14 @@ let totalPickaxes = document.getElementById('totalPickaxes')
 let pickaxeCost = document.getElementById('pickaxeCost')
 let pickaxebtn = document.getElementById('pickaxebtn')
 function addPickaxes(){
-    let pickaxePrice = 450 + pickaxes ** 6.5
+    let pickaxePrice = 450 + pickaxes ** 3.4
     if (points >= pickaxePrice)
     {   
         points = points - pickaxePrice
         pickaxes++
         totalPickaxes.innerText = pickaxes + " Pixel Pickaxes"
         pointsTracker.innerText = points.toFixed(2) + " Pixels"
-        pickaxeCost.innerText = "Cost: " + (450 + pickaxes ** 7.5).toFixed(2) + " Pixels"
+        pickaxeCost.innerText = "Cost: " + (450 + pickaxes ** 3.4).toFixed(2) + " Pixels"
     }
 }
 
@@ -64,14 +64,14 @@ let totalGems = document.getElementById('totalGems')
 let gemCost = document.getElementById('gemCost')
 let gembtn = document.getElementById('gembtn')
 function addGems(){
-    let gemPrice = 700 + gems ** 8.8
+    let gemPrice = 700 + gems ** 4.2
     if(points >= gemPrice)
     {   
         points = points - gemPrice
         gems++
         totalGems.innerText = gems + " Pixel Gems"
         pointsTracker.innerText = points.toFixed(2) + " Pixels"
-        gemCost.innerText = "Cost: " + (700 + gems ** 1.5).toFixed(2) + " Pixels"
+        gemCost.innerText = "Cost: " + (700 + gems ** 4.2).toFixed(2) + " Pixels"
     }
 }
 
@@ -80,14 +80,14 @@ let totalStars = document.getElementById('totalStars')
 let starCost = document.getElementById('starCost')
 let starbtn = document.getElementById('starbtn')
 function addStars(){
-    let starPrice = 1000 + stars ** 9.7
+    let starPrice = 1000 + stars ** 5
     if(points >= starPrice)
     {   
         points = points - starPrice
         stars++
         totalStars.innerText = stars + " Pixel Stars"
         pointsTracker.innerText = points.toFixed(2) + " Pixels"
-        starCost.innerText = "Cost: " + (1000 + stars ** 3.4).toFixed(2) + " Pixels"
+        starCost.innerText = "Cost: " + (1000 + stars ** 5).toFixed(2) + " Pixels"
     }
     
 }
