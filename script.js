@@ -64,14 +64,14 @@ let totalGems = document.getElementById('totalGems')
 let gemCost = document.getElementById('gemCost')
 let gembtn = document.getElementById('gembtn')
 function addGems(){
-    let gemPrice = 700 + gems ** 4.3
+    let gemPrice = 700 + gems ** 3.7
     if(points >= gemPrice)
     {   
         points = points - gemPrice
         gems++
         totalGems.innerText = gems + " Pixel Gems"
         pointsTracker.innerText = points.toFixed(2) + " Pixels"
-        gemCost.innerText = "Cost: " + (700 + gems ** 4.3).toFixed(2) + " Pixels"
+        gemCost.innerText = "Cost: " + (700 + gems ** 3.7).toFixed(2) + " Pixels"
     }
 }
 
@@ -80,14 +80,14 @@ let totalStars = document.getElementById('totalStars')
 let starCost = document.getElementById('starCost')
 let starbtn = document.getElementById('starbtn')
 function addStars(){
-    let starPrice = 1000 + stars ** 6
+    let starPrice = 1000 + stars ** 4.9
     if(points >= starPrice)
     {   
         points = points - starPrice
         stars++
         totalStars.innerText = stars + " Pixel Stars"
         pointsTracker.innerText = points.toFixed(2) + " Pixels"
-        starCost.innerText = "Cost: " + (1000 + stars ** 6).toFixed(2) + " Pixels"
+        starCost.innerText = "Cost: " + (1000 + stars ** 4.9).toFixed(2) + " Pixels"
     }
     
 }
@@ -122,7 +122,7 @@ function gameLoop()
     }
 
 
-    if(points >= 700 + gems ** 4.3)
+    if(points >= 700 + gems ** 3.7)
     {
     gembtn.disabled = false
     }else{
@@ -130,7 +130,7 @@ function gameLoop()
     }
 
      
-    if(points >= 1000 + stars ** 6)
+    if(points >= 1000 + stars ** 4.9)
     {
     starbtn.disabled = false
     }else{
