@@ -1,7 +1,74 @@
+let bgMusic = new Howl({
+     src:['funk.wav'],
+    autoplay: true,
+    volume: .27,
+    loop: true
+})
+
+let blockMusic = new Howl({
+    src:['Coin01.mp3'],
+    volume: .30,
+})
+
+let coinMusic = new Howl({
+    src:['coin10.wav'],
+    volume: .42,
+})
+
+let pickaxeMusic = new Howl({
+    src:['Rise02.mp3'],
+    volume: .42,
+})
+
+let gemMusic = new Howl({
+    src:['Rise06.mp3'],
+    volume: .48,
+})
+
+let arrowMusic = new Howl({
+    src:['Rise03.mp3'],
+    volume: .42,
+})
+
+let starMusic = new Howl({
+    src:['FX01.mp3'],
+    volume: .38,
+})
+
+ function muteMusic()
+{
+    bgMusic.pause()
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 let points = 0
 let pointsTracker = document.getElementById('pointsTracker')
 
 function addPoint() { 
+    blockMusic.play()
     points++
     pointsTracker.innerText = points.toFixed(2) + " Pixels"
 }
@@ -16,6 +83,7 @@ function addArrow(){
     let arrowPrice = 10 + arrows ** 1.5
     if(points >= arrowPrice)
     {   
+        arrowMusic.play()
         points = points - arrowPrice
         arrows++
         totalArrows.innerText = arrows + " Pixel Arrows"
@@ -34,11 +102,13 @@ function addCoins(){
     let coinPrice = 100 + coins ** 2
     if (points >= coinPrice)
     {   
+        coinMusic.play()
         points = points - coinPrice
         coins++
         totalCoins.innerText = coins + " Pixel Coins"
         pointsTracker.innerText = points.toFixed(2) + " Pixels"
         coinCost.innerText = "Cost: " + (100 + coins ** 2).toFixed(2) + " Pixels"
+        
     }
 }
 
@@ -50,6 +120,7 @@ function addPickaxes(){
     let pickaxePrice = 450 + pickaxes ** 3.2
     if (points >= pickaxePrice)
     {   
+        pickaxeMusic.play()
         points = points - pickaxePrice
         pickaxes++
         totalPickaxes.innerText = pickaxes + " Pixel Pickaxes"
@@ -67,6 +138,7 @@ function addGems(){
     let gemPrice = 700 + gems ** 3.7
     if(points >= gemPrice)
     {   
+        gemMusic.play()
         points = points - gemPrice
         gems++
         totalGems.innerText = gems + " Pixel Gems"
@@ -83,6 +155,7 @@ function addStars(){
     let starPrice = 1000 + stars ** 4.9
     if(points >= starPrice)
     {   
+        starMusic.play()
         points = points - starPrice
         stars++
         totalStars.innerText = stars + " Pixel Stars"
